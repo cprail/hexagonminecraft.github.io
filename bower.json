@@ -23,7 +23,7 @@
     "angular-material-icons": "~0.6.0",
     "angular-material": ">=1.0.1",
     "mcserver-js": "https://github.com/MC-API/mcserver-js.git#^1.0.0"
-  },
+      },
   "resolutions": {
     "angular": ">=1.3.*"
   }
