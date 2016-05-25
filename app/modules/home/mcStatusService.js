@@ -15,11 +15,13 @@
 	mcStatusService.$inject = ['$http'];
 
 	function mcStatusService($http){
-		var api = "https://us.mc-api.net/v3/server/info/"
-		$http.get(api + "minecraft.prail.net").then(function (data) {
-			var status = data;
+		var api = "https://us.mc-api.net/v3/server/info/";
+		var status = "";
+		$http.get(api + "minecraft.prail.net").then(function (res) {
+			status = res;
+			console.log(status);
 		}).catch(function (err) {
-			console.log(err);
+			console.error(err);
 		})
 				
 		return {

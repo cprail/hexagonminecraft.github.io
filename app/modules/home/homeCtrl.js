@@ -15,17 +15,11 @@
 
 	Home.$inject = ['homeService'];
 
-	/*
-	* recommend
-	* Using function declarations
-	* and bindable members up top.
-	*/
-
 	function Home(homeService) {
 		/*jshint validthis: true */
 		var vm = this;
 		vm.title = "Hexagon Cinema MC";
-		vm.mcstatus = "1.0.0";
+		//vm.mcstatus = mcStatusService.getStatus();
 		vm.listFeatures = homeService.getFeaturesList();
 
 	}

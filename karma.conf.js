@@ -11,7 +11,6 @@ module.exports = function (config) {
 			'src/bower_components/jquery/dist/jquery.js',
 			'src/bower_components/es5-shim/es5-shim.js',
 			'src/bower_components/json3/lib/json3.min.js',
-			'src/bower_components/bootstrap/dist/js/bootstrap.js',
 			'src/bower_components/angular/angular.js',
 			'src/bower_components/angular-aria/angular-aria.js',
 			'src/bower_components/angular-resource/angular-resource.js',
@@ -21,7 +20,6 @@ module.exports = function (config) {
 			'src/bower_components/angular-animate/angular-animate.js',
 			'src/bower_components/angular-touch/angular-touch.js',
 			'src/bower_components/angular-ui-router/release/angular-ui-router.js',
-			'src/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
 			'src/bower_components/angular-aria/angular-aria.js',
 			'src/bower_components/angular-material/angular-material.js',
 			'src/bower_components/angular-messages/angular-messages.js',
@@ -31,13 +29,32 @@ module.exports = function (config) {
 			'app/modules/home/homeCtrl.js',
 			'app/modules/home/homeRoute.js',
 			'app/modules/home/homeService.js',
-			'app/modules/home/home-test.js'
+			'app/modules/home/home-test.js',
+			'app/modules/rules/rulesModule.js',
+			'app/modules/rules/rulesCtrl.js',
+			'app/modules/rules/rulesRoute.js',
+			'app/modules/rules/rulesService.js',
+			'app/modules/rules/rules-test.js',
+			'app/modules/map/mapModule.js',
+			'app/modules/map/mapCtrl.js',
+			'app/modules/map/mapRoute.js',
+			'app/modules/map/mapService.js',
+			'app/modules/map/map-test.js',
 		],
 
 		// Test results reporter to use
 		// Possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
 		//reporters: ['progress'],
 		reporters: ['spec'],
+
+		plugins : [
+			'karma-jasmine',
+			'karma-coverage',
+			'karma-chrome-launcher',
+			'karma-firefox-launcher',
+			'karma-phantomjs-launcher',
+			'karma-spec-reporter'
+		],
 
 		// Web server port
 		port: 9876,

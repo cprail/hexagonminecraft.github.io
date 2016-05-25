@@ -23,5 +23,4 @@ angular.module('hexagoncinema-mc')
 				url:'/dashboard',
 				templateUrl: 'app/modules/home/dashboard.html'
 			});
-			
 	}]);

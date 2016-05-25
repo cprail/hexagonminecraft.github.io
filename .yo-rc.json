@@ -4,6 +4,24 @@
     "angularCookies": true,
     "angularAnimate": true,
     "angularSanitize": true,
-    "angularMaterial": true
+    "angularMaterial": true,
+    "modules": [
+      {
+        "name": "rules"
+      },
+      {
+        "name": "map"
+      }
+    ],
+    "menu": [
+      {
+        "link": "rules",
+        "title": "Rules"
+      },
+      {
+        "link": "map",
+        "title": "Map"
+      }
+    ]
   }
 }
