@@ -18,8 +18,10 @@
 	function RulesService($http) {
 		
 		var list = [
-			{ "rule": "No Griefing! - Penalty: Ban for 1 Weeks (One Week More Per Infringment)" },
-			{ "rule": "Using Controller AS syntax" }
+			{ "rule": "No griefing!", "penaltey": "Ban for 1 week." },
+			{ "rule": "Do not take other players stuff without permission.", "penaltey": "Ban for 30 minutes." },
+			{ "rule": "Do not destroy other players property.", "penaltey": "Ban for one hour." },
+			{ "rule": "If you happen to accidentally wreak something, help the other player fix it.", "penaltey": "" }
 		];
 
 		return {

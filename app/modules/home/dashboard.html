@@ -2,7 +2,10 @@
     <md-card class="text-center">
         <md-card-content>
             <h1>{{ vm.title }}</h1>
-            <h3>{{ vm.mcstatus }}</h3>
+            <div layout="row" layout-sm="column" layout-align="space-around" ng-hide="vm.done">
+                <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+            </div>
+            <h3 ng-show="vm.done"><span ng-style="vm.onlineColor">Server {{ vm.isOnline }}</span> <span ng-show="vm.status.online">| There are {{vm.status.players.online}} players online.</span></h3>
             <p>The Official Hexagon Cinema Minecraft server website!</p>
             <br>
             <md-divider class="margin-top-20"></md-divider>

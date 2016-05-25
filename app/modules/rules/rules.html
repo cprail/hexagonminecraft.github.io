@@ -8,9 +8,13 @@
             <h1 class="margin-top-50">Rules</h1>
             <ul>
                 <li class=" text-center" ng-repeat="item in vm.listRules">
-                    <p>{{item.rule}}</p>
+                    <p>{{item.rule}} <span style="color: red">{{item.penaltey}}</span></p>
                 </li>
             </ul>
+            <br>
+            <md-divider></md-divider>      
+            <br>      
+            <small>Penalties double for every infringment.</small>
         </md-card-content>
     </md-card>
 </div>
