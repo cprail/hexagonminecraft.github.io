@@ -11,7 +11,7 @@ Official Hexagon Cinema MC Server Website
 
 ### Production (Ubuntu)
 1. Install [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads)
-2. Install Apache2 `sudo apt install apache2` (or NGINX)
+2. Install Apache2 `sudo apt install apache2` (or [NGINX](https://nginx.org))
 3. Install Bower `npm install bower -g`
 4. Clone the repo `git clone https://github.com/nprail/hexagon-mc.git /var/www/html`
 5. Change directory `cd /var/www/html`
