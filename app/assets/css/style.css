@@ -1,14 +1,11 @@
-.map{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0; 
-    width: 100%;
-    margin: 0 auto;
+.angular-map-container {
+    border: none;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
 }
-
-
         body, md-content.md-blue-grey-theme {
             background-color: #eee;
         }
