@@ -1,0 +1,9 @@
+{
+  "generator-angm": {
+    "appName": "hexagoncinema-mc",
+    "angularCookies": true,
+    "angularAnimate": true,
+    "angularSanitize": true,
+    "angularMaterial": true
+  }
+}
