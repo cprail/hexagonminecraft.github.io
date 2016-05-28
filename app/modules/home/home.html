@@ -16,6 +16,12 @@
                 </div>
                 <p> Home </p>
             </md-list-item>
+            <md-list-item href="http://192.168.0.176:4567">
+                <div class="inset">
+                    <ng-md-icon icon="settings"></ng-md-icon>
+                </div>
+                <p> Admin </p>
+            </md-list-item>
             <md-list-item ng-repeat="item in vm.menu" ng-click="vm.navigateTo('home.' + item.link)">
                 <div class="inset" ng-show="item.icon">
                     <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
