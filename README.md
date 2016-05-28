@@ -10,6 +10,11 @@ Official Hexagon Cinema MC Server Website
 6. Run it! `grunt dev`
 
 ### Production (Ubuntu)
+
+##### Quick automatic install
+`wget -O- https://raw.githubusercontent.com/nprail/hexagon-mc/master/install.sh | sudo sh`
+
+##### Manual install
 1. Install [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads)
 2. Install Apache2 `sudo apt install apache2` (or [NGINX](https://nginx.org))
 3. Install Bower `sudo npm install bower grunt -g`
