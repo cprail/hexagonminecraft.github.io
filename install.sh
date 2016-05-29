@@ -4,9 +4,14 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo ':: Installing Node.js'
-curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-apt-get install -y nodejs
+if node -v;
+then
+	echo ':: Node.js is installed.'
+else
+	echo ':: Installing Node.js'
+	curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+	apt-get install -y nodejs
+fi
 
 if service --status-all | grep -Fq 'apache2'; 
 then
@@ -26,11 +31,10 @@ cd /var/www/hexmc
 chmod -R 755 /var/www/hexmc
 cp /var/www/hexmc/hexmc-vhost.conf /etc/apache2/sites-available/hexmc-vhost.conf
 a2ensite hexmc-vhost.conf
+service apache2 reload
 
 echo ':: Installing dependencies'
 bower install --allow-root
 npm install
-
-service apache2 restart
 
 echo ':: Done! Open http://localhost:8080 in browser'
