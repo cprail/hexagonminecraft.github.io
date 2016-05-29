@@ -28,7 +28,7 @@ cp /var/www/hexmc/hexmc-vhost.conf /etc/apache2/sites-available/hexmc-vhost.conf
 a2ensite hexmc-vhost.conf
 
 echo ':: Installing dependencies'
-bower install
+bower install --allow-root
 npm install
 
 service apache2 restart
