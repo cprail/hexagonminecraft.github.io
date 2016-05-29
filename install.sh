@@ -25,6 +25,8 @@ rm -rf /var/www/hexmc
 git clone https://github.com/nprail/hexagon-mc.git /var/www/hexmc
 cd /var/www/hexmc
 sudo chmod -R 755 /var/www/hexmc
+cp /var/www/hexmc/hexmc-vhost.conf /etc/apache2/sites-available/hexmc-vhost.conf
+a2ensite hexmc-vhost.conf
 
 echo ':: Installing dependencies'
 bower install
