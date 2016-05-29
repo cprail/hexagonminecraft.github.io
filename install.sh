@@ -15,9 +15,9 @@ echo ':: Installing Bower and Grunt'
 npm install bower grunt -g
 
 echo ':: Cloning repo.'
-rm -rf /var/www/html
-git clone https://github.com/nprail/hexagon-mc.git /var/www/html
-cd /var/www/html
+rm -rf /var/www/hexmc
+git clone https://github.com/nprail/hexagon-mc.git /var/www/hexmc
+cd /var/www/hexmc
 
 echo ':: Installing dependencies'
 bower install
