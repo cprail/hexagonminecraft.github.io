@@ -8,13 +8,12 @@ echo ':: Installing Node.js'
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 apt-get install -y nodejs
 
-if service --status-all | grep -Fq 'apache2'; then
+if service --status-all | grep -Fq 'apache2'; 
+then
 	echo ':: Apache2 is installed.'
-	exit 1
 else
 	echo ':: Installing Apache2'
 	apt-get install apache2 -y
-	exit 1
 fi
 
 echo ':: Installing Bower and Grunt'
