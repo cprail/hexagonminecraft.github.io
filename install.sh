@@ -32,6 +32,6 @@ echo ':: Installing dependencies'
 bower install
 npm install
 
-sudo service apache2 restart
+service apache2 restart
 
 echo ':: Done! Open http://localhost:8080 in browser'
