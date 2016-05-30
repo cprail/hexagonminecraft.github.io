@@ -13,12 +13,12 @@ else
 	apt-get install -y nodejs
 fi
 
-if service --status-all | grep -Fq 'apache2'; 
+if nginx; 
 then
-	echo ':: Apache2 is installed.'
+	echo ':: NGINX is installed.'
 else
-	echo ':: Installing Apache2'
-	apt-get install apache2 -y
+	echo ':: Installing NGINX'
+	apt-get install -y nginx
 fi
 
 echo ':: Installing Bower and Grunt'
@@ -29,9 +29,10 @@ git clone https://github.com/nprail/hexagon-mc.git /var/www/hexmc
 cd /var/www/hexmc
 
 chmod -R 755 /var/www/hexmc
-cp /var/www/hexmc/hexmc-vhost.conf /etc/apache2/sites-available/hexmc-vhost.conf
-a2ensite hexmc-vhost.conf
-service apache2 reload
+cp /var/www/hexmc/hexmc-nginx /etc/nginx/sites-available/hexmc-nginx
+ln -s /etc/nginx/sites-available/hexmc-nginx /etc/nginx/sites-enabled/
+
+service nginx reload
 
 echo ':: Installing dependencies'
 bower install --allow-root
