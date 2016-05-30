@@ -1,0 +1,12 @@
+server {
+        listen 8080 default_server;
+
+        root /var/www/hexmc;
+        index index.html index.htm;
+
+        #server_name localhost;
+
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+}
