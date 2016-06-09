@@ -25,7 +25,6 @@
 			if (data) {
 				$scope.$apply(function () {
 					vm.status = data;
-					console.log(vm.status);
 					if (vm.status.status) {
 						vm.isOnline = "Online";
 						vm.onlineColor = { 'color': 'green' };
