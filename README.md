@@ -1,5 +1,5 @@
 # Hexagon-MC
-Official Hexagon Cinema MC Server Website
+Official Hexagon MC Server Website
 
 ### Development
 1. Install [Node.js](https://nodejs.org/en/) and [Git](https://git-scm.com/downloads)
