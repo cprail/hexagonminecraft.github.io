@@ -21,7 +21,7 @@
 		vm.title = "Hexagon MC";
 		vm.done = false;
 
-		mcserver.ping("minecraft.prail.net", function (data, err) {
+		mcserver.ping("play.hexagonminecraft.com", function (data, err) {
 			if (data) {
 				$scope.$apply(function () {
 					vm.status = data;
