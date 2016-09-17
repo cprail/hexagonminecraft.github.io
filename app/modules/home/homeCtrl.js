@@ -18,7 +18,7 @@
 	function Home($scope) {
 		/*jshint validthis: true */
 		var vm = this;
-		vm.title = "Hexagon Cinema MC";
+		vm.title = "Hexagon MC";
 		vm.done = false;
 
 		mcserver.ping("minecraft.prail.net", function (data, err) {
