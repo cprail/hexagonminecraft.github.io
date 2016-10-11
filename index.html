@@ -1,170 +1,256 @@
 <!DOCTYPE html>
-<html lang="pt" ng-app="hexagoncinema-mc">
+<html lang="en-US" ng-app="app">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<base href="/">
+
+	<!-- META information -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Hexagon official MC server website!">
+	<meta name="author" content="Noah Prail <Me@NPrail.me>" />
+	<meta name="keywords" content="minecraft" />
+
 	<title>Hexagon MC</title>
-	<meta name="description" content="Hexagon official MC server website!" />
-	<meta name="author" content="" />
-	<meta name="keywords" content="" />
-	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes" />
-	<link rel="shortcut icon" href="app/assets/images/favicon.ico" />
-	<link rel="apple-touch-icon" href="app/assets/images/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="app/assets/images/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="app/assets/images/apple-touch-icon-114x114.png" />
-	<!-- injector:css -->
-	<link rel="stylesheet" href="/src/bower_components/angular-material-icons/angular-material-icons.css">
-	<link rel="stylesheet" href="/src/bower_components/angular-material/angular-material.css">
-	<!-- endinjector -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="app/assets/css/style.css">
-	
-	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-	<link rel="manifest" href="icons/manifest.json">
-	<meta name="msapplication-TileColor" content="#558B2F">
-	<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-	<meta name="theme-color" content="#558B2F">
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css" type='text/css'>
+
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type='text/css'>
+	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+
+	<!-- Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<meta name="msapplication-TileColor" content="#333333">
+	<meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#333333">
+	<!-- END Icons -->
 </head>
-<body ng-cloak>
 
-<!--Beginning-->
-<div ui-view layout="row" layout-fill></div>
-<!--End-->
+<body ng-controller="AppCtrl">
 
-<!--Templates. Remove then to a better location -->
+	<!-- Top section -->
+	<div class="top fullscreen background parallax" id="top" style="background-image:url('images/background.jpg');" data-img-width="1920"
+		data-img-height="1080" data-diff="250">
+		<div class="content-a">
+			<div class="overlay"></div>
+			<div class="content-b">
+				<div class="dark-line">
+					<h1>Hexagon MC</h1>
+					<p>The Hexagon MC Official Minecraft Server!</p>
+				</div>
+				<div class="arrows"></div>
+			</div>
+		</div>
+	</div>
 
-<script type="text/ng-template" id="tabDialog.tmpl.html">
-    <md-dialog
-    aria-label="Profile">
-    <form>
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <h2>Profile Settings</h2>
-                <span flex></span>
-                <md-button class="md-icon-button" ng-click="cancel()">
-                    <md-icon aria-label="Close dialog">close</md-icon>
-                </md-button>
-            </div>
-        </md-toolbar>
-        <md-dialog-content style="max-width:800px;max-height:810px; ">
-            <md-tabs md-dynamic-height md-border-bottom>
-                <md-tab label="one">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-2">Tab One</h1>
+	<!-- Navigation -->
+	<div class="nav-content">
+		<nav class="navbar navbar-static-top" role="navigation">
+			<div class="container">
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                            Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales
-                            pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies
-                            mi.</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="two">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-2">Tab Two</h1>
+				<!-- Toggle icon for responsive design -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+            			<span class="sr-only">Toggle navigation</span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+         		   		<span class="icon-bar"></span>
+          			</button>
+				</div>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-                            Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales
-                            pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies
-                            mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum
-                            enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida.
-                            Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a
-                            facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac
-                            lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim
-                            venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit.
-                            Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec
-                            orci posuere, nec luctus mauris semper.</p>
+				<!-- Change your links here -->
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-center">
+						<li><a href="#top">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#team">Members</a></li>
+						<li><a href="#map">Map</a></li>
+						<li><a href="https://support.hexagonminecraft.com/en/knowledgebase/3-getting-started/docs/3-rules">Rules</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 
-                        <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec
-                            magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis.
-                            Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras
-                            ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit
-                            tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed
-                            nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+	<!-- About section -->
+	<section class="about" id="about">
+		<div class="container">
+			<h3>We are Hexagon MC</h3>
+			<div class="divider">
+				<div class="hr">
+					<div class="hr-dot"></div>
+				</div>
+			</div>
+			<h4>Join on play.hexagonminecraft.com</h4>
+			<div class="col-md-6 about-item">
+				<i class="fa fa-cog fa-2x"></i>
+				<div class="col-content">
+					<h5>Why <i>Hexagon</i> MC?</h5>
+					<p>There are six members of Hexagon MC, so we named ourselves Hexagon MC. </p>
+				</div>
+			</div>
+			<div class="col-md-6 about-item">
+				<i class="fa fa-users fa-2x"></i>
+				<div class="col-content">
+					<h5>Small community</h5>
+					<p>There are only six main members (thus hexagon) and a few non-member players as well!</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere
-                            molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit
-                            erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac
-                            est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-                    </md-content>
-                </md-tab>
-                <md-tab label="three">
-                    <md-content class="md-padding">
-                        <h1 class="md-display-2">Tab Three</h1>
+	<!-- Action bar -->
+	<section class="action-bar dark" id="section-bar-1">
+		<div class="container">
+			<div class="col-md-8">
+				<h3 class="small dark" ng-show="done"><span ng-style="onlineColor">
+						Server {{ isOnline }}</span> <span ng-show="status.status">| There are {{status.players.online}} players currently online.</span>
+				</h3>
+			</div>
+			<div class="col-md-4">
+				<a href="#" class="button button-dark">
+					<span class="button-text">MC Version: {{status.version }}</span>
+					<span class="button-icon"><i class="fa fa-arrow-right"></i></span>
+				</a>
+			</div>
+		</div>
+	</section>
 
-                        <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere
-                            molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit
-                            erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac
-                            est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
-                    </md-content>
-                </md-tab>
-            </md-tabs>
-        </md-dialog-content>
+	<!-- Number counter section -->
+	<section class="not-fullscreen background parallax counter" id="counter" style="background-image:url('images/counter-bg.jpg');"
+		data-img-width="1600" data-img-height="1064" data-diff="500">
+		<div class="content-a">
+			<div class="content-b">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="col-xs-3">
+						<span class="counter-number white">{{status.players.online}}</span>
+						<span class="white counter-text">players online</span>
+					</div>
+					<div class="col-xs-3">
+						<span class="counter-number white">10</span>
+						<span class="white counter-text">players joined in total</span>
+					</div>
+					<div class="col-xs-3">
+						<span class="counter-number white">6</span>
+						<span class="white counter-text">months online</span>
+					</div>
+					<div class="col-xs-3">
+						<span class="counter-number white">6</span>
+						<span class="white counter-text">great members</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <md-dialog-actions layout="row">
-            <span flex></span>
-            <md-button ng-click="answer('not useful')">
-                Not Useful
-            </md-button>
-            <md-button ng-click="answer('useful')" style="margin-right:20px;">
-                Useful
-            </md-button>
-        </md-dialog-actions>
-    </form>
-    </md-dialog>
-</script>
-<!-- End templates -->
+	<!-- Team section -->
+	<section class="team" id="team">
+		<div class="container">
+			<h3>The members of Hexagon MC</h3>
+			<div class="divider">
+				<div class="hr">
+					<div class="hr-dot"></div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/SirFilios" alt="SirFilios">
+				<h4 class="bold">SirFilios</h4>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/Time_Explorer" alt="Time_Explorer">
+				<h4 class="bold">Time_Explorer</h4>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/Black_Steel" alt="Black_Steel">
+				<h4 class="bold">Black_Steel</h4>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/RavewnClaw" alt="RavewnClaw">
+				<h4 class="bold">RavewnClaw</h4>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/Black_WolfKnight" alt="Black_WolfKnight">
+				<h4 class="bold">Black_WolfKnight</h4>
+			</div>
+			<div class="col-md-4">
+				<img src="https://mcapi.ca/avatar/2d/OnceUponABlock" alt="OnceUponABlock">
+				<h4 class="bold">OnceUponABlock</h4>
+			</div>
+		</div>
+	</section>
 
-<script src="src/bower_components/mcserver-js/src/mcserver.js"></script>
+	<!-- Map section -->
+	<section class="map" id="map">
+		<div class="container">
+			<h3>Hexagon MC Map</h3>
+			<div class="divider">
+				<div class="hr">
+					<div class="hr-dot"></div>
+				</div>
+			</div>
+		</div>
+		<iframe class="" height="500" width="100%" src="https://map.hexagonminecraft.com" frameborder="0" scrolling="no" marginheight="0"
+			marginwidth="0"></iframe>
+	</section>
 
-<!-- injector:js -->
-<script src="/src/bower_components/es5-shim/es5-shim.js"></script>
-<script src="/src/bower_components/json3/lib/json3.min.js"></script>
-<script src="/src/bower_components/angular/angular.js"></script>
-<script src="/src/bower_components/angular-resource/angular-resource.js"></script>
-<script src="/src/bower_components/angular-aria/angular-aria.js"></script>
-<script src="/src/bower_components/angular-mocks/angular-mocks.js"></script>
-<script src="/src/bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="/src/bower_components/angular-animate/angular-animate.js"></script>
-<script src="/src/bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="/src/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="/src/bower_components/angular-messages/angular-messages.js"></script>
-<script src="/src/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
-<script src="/src/bower_components/angular-material/angular-material.js"></script>
-<script src="/app/app.js"></script>
-<script src="/app/app.config.js"></script>
-<script src="/app/modules/home/homeModule.js"></script>
-<script src="/app/modules/map/mapModule.js"></script>
-<script src="/app/modules/rules/rulesModule.js"></script>
-<script src="/app/modules/home/homeRoute.js"></script>
-<script src="/app/modules/map/mapRoute.js"></script>
-<script src="/app/modules/rules/rulesRoute.js"></script>
-<script src="/app/modules/home/homeCtrl.js"></script>
-<script src="/app/modules/layouts/main-page/mainPageCtrl.js"></script>
-<script src="/app/modules/layouts/side-nav/sidenavCtrl.js"></script>
-<script src="/app/modules/map/mapCtrl.js"></script>
-<script src="/app/modules/rules/rulesCtrl.js"></script>
-<script src="/app/modules/home/homeService.js"></script>
-<script src="/app/modules/home/statusService.js"></script>
-<script src="/app/modules/layouts/nav-bar/navBarService.js"></script>
-<script src="/app/modules/layouts/side-nav/sidenavService.js"></script>
-<script src="/app/modules/rules/rulesService.js"></script>
-<!-- endinjector -->
+	<!-- Bottom section -->
+	<section class="bottom dark">
+		<div class="container">
+			<div class="bottom-content">
+				<span class="ip">play.hexagonminecraft.com</span>
+				<span class="server-name">Hexagon MC</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="dark">
+		<div class="container">
+			<span class="copyright">Design by <a href="https://nprail.me">Noah Prail</a></span>
+			<ul>
+				<li><a href="#top">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#team">Members</a></li>
+				<li><a href="#map">Map</a></li>
+				<li><a href="https://support.hexagonminecraft.com/en/knowledgebase/3-getting-started/docs/3-rules">Rules</a></li>
+			</ul>
+		</div>
+	</footer>
 
 
+	<!-- jQuery Version 1.10.2 -->
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<!-- Angular JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="js/main.js"></script>
+
+	<!-- App JavaScript -->
+	<script src="js/app/app.js"></script>
+	<script src="js/app/controllers.js"></script>
 </body>
+
 </html>
