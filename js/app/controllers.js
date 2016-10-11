@@ -27,30 +27,4 @@ angular.module('app.controllers', [])
             $scope.status.players.online = "0"
             $scope.done = true;
         });
-
-        /*mcserver.ping("play.hexagonminecraft.com", function (data, err) {
-            if (data) {
-                $scope.$apply(function () {
-                    $scope.status = data;
-                    if ($scope.status.status) {
-                        $scope.isOnline = "Online";
-                        $scope.onlineColor = { 'color': 'green' };
-                        $scope.done = true;
-                    }
-                    else {
-                        $scope.isOnline = "Offline";
-                        $scope.onlineColor = { 'color': 'red' };
-                        $scope.done = true;
-                    }
-                });
-
-            }
-            else {
-                console.error(err);
-                $scope.isOnline = "Offline";
-                $scope.onlineColor = { 'color': 'red' };
-                $scope.status.players.online = "no"
-                $scope.done = true;
-            }
-        });*/
     });

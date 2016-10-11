@@ -31,7 +31,5 @@
 		"jasmine": false,
 		"jquery": false,
 		"mocha": true
-
 	}
-
 }
